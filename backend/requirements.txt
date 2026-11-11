@@ -1,0 +1,17 @@
+Django>=5.2
+djangorestframework
+channels
+channels_redis
+uvicorn
+psycopg2-binary
+django-environ
+redis
+python-dotenv
+djangorestframework-simplejwt
+django-cors-headers
+Pillow
+dj-rest-auth
+dj-rest-auth[with_social]
+django-allauth
+django-filter
+livekit-api>=1.0.0,<2.0

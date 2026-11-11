@@ -1,0 +1,77 @@
+[
+  {
+    "model": "core.userprofile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "role": "producer",
+      "phone": "+221 77 123 45 67",
+      "address": "Route de Keur Massar, Dakar",
+      "city": "Dakar",
+      "country": "Sénégal",
+      "verified": true,
+      "created_at": "2024-01-15T10:00:00Z",
+      "updated_at": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "core.userprofile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "role": "producer",
+      "phone": "+221 76 234 56 78",
+      "address": "Village artisanal, Saint-Louis",
+      "city": "Saint-Louis",
+      "country": "Sénégal",
+      "verified": true,
+      "created_at": "2024-01-16T10:00:00Z",
+      "updated_at": "2024-01-16T10:00:00Z"
+    }
+  },
+  {
+    "model": "core.userprofile",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "role": "producer",
+      "phone": "+221 70 345 67 89",
+      "address": "Marché Kermel, Dakar",
+      "city": "Dakar",
+      "country": "Sénégal",
+      "verified": true,
+      "created_at": "2024-01-17T10:00:00Z",
+      "updated_at": "2024-01-17T10:00:00Z"
+    }
+  },
+  {
+    "model": "core.userprofile",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "role": "buyer",
+      "phone": "+221 78 456 78 90",
+      "address": "Plateau, Dakar",
+      "city": "Dakar",
+      "country": "Sénégal",
+      "verified": false,
+      "created_at": "2024-01-18T10:00:00Z",
+      "updated_at": "2024-01-18T10:00:00Z"
+    }
+  },
+  {
+    "model": "core.userprofile",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "role": "admin",
+      "phone": "+221 33 123 45 67",
+      "address": "Siège FopCam, Dakar",
+      "city": "Dakar",
+      "country": "Sénégal",
+      "verified": true,
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2024-01-01T00:00:00Z"
+    }
+  }
+]

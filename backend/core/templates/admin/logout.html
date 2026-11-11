@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Déconnexion - FopCam Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-fopcam: #e63946;
+        --color-future-50: #f8fafc;
+        --color-future-100: #f1f5f9;
+        --color-future-200: #e2e8f0;
+        --color-future-300: #cbd5e1;
+        --color-future-400: #94a3b8;
+        --color-future-500: #64748b;
+        --color-future-600: #475569;
+        --color-future-700: #334155;
+        --color-future-800: #1e293b;
+        --color-future-900: #0f172a;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        min-height: 100vh;
+      }
+
+      .logout-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 2rem;
+      }
+
+      .logout-card {
+        background: #1e293b;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.75rem;
+        padding: 3rem;
+        max-width: 500px;
+        text-align: center;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+
+      .logout-header h1 {
+        font-size: 1.875rem;
+        font-weight: 800;
+        color: #ffffff;
+        margin-bottom: 0.5rem;
+      }
+
+      .logout-header p {
+        color: #cbd5e1;
+        margin-bottom: 1.5rem;
+      }
+
+      .logout-message {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: rgba(16, 185, 129, 0.1);
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        border-radius: 0.5rem;
+      }
+
+      .logout-message p {
+        color: #a7f3d0;
+        margin: 0;
+        font-size: 1.05rem;
+      }
+
+      .logout-actions {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #e63946 0%, #fb8500 100%);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(230, 57, 70, 0.3);
+      }
+
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.1);
+        color: #cbd5e1;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+      }
+    </style>
+</head>
+<body>
+    <div class="logout-container">
+      <div class="logout-card">
+        <div class="logout-header">
+          <h1>{{ site_header }}</h1>
+          <p>Vous avez été déconnecté avec succès.</p>
+        </div>
+        
+        <div class="logout-message">
+          <p>Merci d'avoir utilisé FopCam Admin. À bientôt !</p>
+        </div>
+        
+        <div class="logout-actions">
+          <a href="/admin/login/" class="btn btn-primary">Retour à la connexion</a>
+          <a href="/" class="btn btn-secondary">Retour à l'accueil</a>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "fopcam-root",
+  "private": true,
+  "scripts": {
+    "dev": "cd frontend && PORT=3000 npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && PORT=3000 npm run start"
+  }
+}

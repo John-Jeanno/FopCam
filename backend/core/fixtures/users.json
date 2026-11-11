@@ -1,0 +1,73 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "producer1",
+      "first_name": "Marie",
+      "last_name": "Dubois",
+      "email": "marie.dubois@fopcam.com",
+      "password": "pbkdf2_sha256$1000000$8rbPhqPmeN9hvZcJZaTY3E$dng1IN5kYjGJjeJVImy3BE6ECRnjIeyqzhCLufHmUMI=",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-01-15T10:00:00Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "producer2",
+      "first_name": "Ahmed",
+      "last_name": "Benali",
+      "email": "ahmed.benali@fopcam.com",
+      "password": "pbkdf2_sha256$1000000$8rbPhqPmeN9hvZcJZaTY3E$dng1IN5kYjGJjeJVImy3BE6ECRnjIeyqzhCLufHmUMI=",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-01-16T10:00:00Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "username": "producer3",
+      "first_name": "Fatou",
+      "last_name": "Diallo",
+      "email": "fatou.diallo@fopcam.com",
+      "password": "pbkdf2_sha256$1000000$8rbPhqPmeN9hvZcJZaTY3E$dng1IN5kYjGJjeJVImy3BE6ECRnjIeyqzhCLufHmUMI=",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-01-17T10:00:00Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "username": "buyer1",
+      "first_name": "Jean",
+      "last_name": "Martin",
+      "email": "jean.martin@email.com",
+      "password": "pbkdf2_sha256$1000000$8rbPhqPmeN9hvZcJZaTY3E$dng1IN5kYjGJjeJVImy3BE6ECRnjIeyqzhCLufHmUMI=",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-01-18T10:00:00Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "FopCam",
+      "email": "admin@fopcam.com",
+      "password": "pbkdf2_sha256$1000000$9o748VHQGG36cYsvUTdF73$HDoi8A9HXE2RKFrSte20MLOd3TOFTxwMXFtg5g62Z1Y=",
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": true,
+      "date_joined": "2024-01-01T00:00:00Z"
+    }
+  }
+]

@@ -1,0 +1,682 @@
+[
+  {
+    "model": "core.category",
+    "pk": 1,
+    "fields": {
+      "name": "Agricultural Equipment",
+      "slug": "agricultural-equipment",
+      "sector": "agriculture",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 2,
+    "fields": {
+      "name": "Alimentation",
+      "slug": "alimentation",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 3,
+    "fields": {
+      "name": "Aquaculture",
+      "slug": "aquaculture",
+      "sector": "agriculture",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 4,
+    "fields": {
+      "name": "Automobile",
+      "slug": "automobile",
+      "sector": "manufacturing",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 5,
+    "fields": {
+      "name": "Bijoux",
+      "slug": "bijoux",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 6,
+    "fields": {
+      "name": "Books",
+      "slug": "books",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 7,
+    "fields": {
+      "name": "Bureautique",
+      "slug": "bureautique",
+      "sector": "services",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 8,
+    "fields": {
+      "name": "Chemicals",
+      "slug": "chemicals",
+      "sector": "manufacturing",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 9,
+    "fields": {
+      "name": "Chaussure",
+      "slug": "chaussure",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 10,
+    "fields": {
+      "name": "Cosmétique",
+      "slug": "cosmetique",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 11,
+    "fields": {
+      "name": "Crop Cultivation",
+      "slug": "crop-cultivation",
+      "sector": "agriculture",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 12,
+    "fields": {
+      "name": "Dairy Farming",
+      "slug": "dairy-farming",
+      "sector": "agriculture",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 13,
+    "fields": {
+      "name": "Droguerie",
+      "slug": "droguerie",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 14,
+    "fields": {
+      "name": "E-commerce",
+      "slug": "e-commerce",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 15,
+    "fields": {
+      "name": "Electronics",
+      "slug": "electronics",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 16,
+    "fields": {
+      "name": "Électroménagère",
+      "slug": "electromenagere",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 17,
+    "fields": {
+      "name": "Fashion",
+      "slug": "fashion",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 18,
+    "fields": {
+      "name": "Food Processing",
+      "slug": "food-processing",
+      "sector": "manufacturing",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 19,
+    "fields": {
+      "name": "Habillement",
+      "slug": "habillement",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 20,
+    "fields": {
+      "name": "Hardware",
+      "slug": "hardware",
+      "sector": "technology",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 21,
+    "fields": {
+      "name": "Home Goods",
+      "slug": "home-goods",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 22,
+    "fields": {
+      "name": "Immobilier",
+      "slug": "immobilier",
+      "sector": "real_estate",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 23,
+    "fields": {
+      "name": "Livestock",
+      "slug": "livestock",
+      "sector": "agriculture",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 24,
+    "fields": {
+      "name": "Machinery",
+      "slug": "machinery",
+      "sector": "manufacturing",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 25,
+    "fields": {
+      "name": "Medical Equipment",
+      "slug": "medical-equipment",
+      "sector": "health",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 26,
+    "fields": {
+      "name": "Mobilier",
+      "slug": "mobilier",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 27,
+    "fields": {
+      "name": "Organic Farming",
+      "slug": "organic-farming",
+      "sector": "agriculture",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 28,
+    "fields": {
+      "name": "Pharmaceuticals",
+      "slug": "pharmaceuticals",
+      "sector": "health",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 29,
+    "fields": {
+      "name": "Poultry Farming",
+      "slug": "poultry-farming",
+      "sector": "agriculture",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 30,
+    "fields": {
+      "name": "Produits bio",
+      "slug": "produits-bio",
+      "sector": "agriculture",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 31,
+    "fields": {
+      "name": "Retail Stores",
+      "slug": "retail-stores",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 32,
+    "fields": {
+      "name": "Seeds and Fertilizers",
+      "slug": "seeds-and-fertilizers",
+      "sector": "agriculture",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 33,
+    "fields": {
+      "name": "Supermarkets",
+      "slug": "supermarkets",
+      "sector": "retail",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 34,
+    "fields": {
+      "name": "Textile",
+      "slug": "textile",
+      "sector": "manufacturing",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 35,
+    "fields": {
+      "name": "Tissus",
+      "slug": "tissus",
+      "sector": "manufacturing",
+      "category_type": "product"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 36,
+    "fields": {
+      "name": "Accounting",
+      "slug": "accounting",
+      "sector": "finance",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 37,
+    "fields": {
+      "name": "Artificial Intelligence",
+      "slug": "artificial-intelligence",
+      "sector": "technology",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 38,
+    "fields": {
+      "name": "Automotive",
+      "slug": "automotive",
+      "sector": "manufacturing",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 39,
+    "fields": {
+      "name": "Banking",
+      "slug": "banking",
+      "sector": "finance",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 40,
+    "fields": {
+      "name": "Cloud Computing",
+      "slug": "cloud-computing",
+      "sector": "technology",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 41,
+    "fields": {
+      "name": "Clinics",
+      "slug": "clinics",
+      "sector": "health",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 42,
+    "fields": {
+      "name": "Cybersecurity",
+      "slug": "cybersecurity",
+      "sector": "technology",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 43,
+    "fields": {
+      "name": "Data Science",
+      "slug": "data-science",
+      "sector": "technology",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 44,
+    "fields": {
+      "name": "Dental Care",
+      "slug": "dental-care",
+      "sector": "health",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 45,
+    "fields": {
+      "name": "Educational Materials",
+      "slug": "educational-materials",
+      "sector": "education",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 46,
+    "fields": {
+      "name": "Environmental Services",
+      "slug": "environmental-services",
+      "sector": "government",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 47,
+    "fields": {
+      "name": "Fitness",
+      "slug": "fitness",
+      "sector": "health",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 48,
+    "fields": {
+      "name": "Government Services",
+      "slug": "government-services",
+      "sector": "government",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 49,
+    "fields": {
+      "name": "Hospitals",
+      "slug": "hospitals",
+      "sector": "health",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 50,
+    "fields": {
+      "name": "Insurance",
+      "slug": "insurance",
+      "sector": "finance",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 51,
+    "fields": {
+      "name": "Investment",
+      "slug": "investment",
+      "sector": "finance",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 52,
+    "fields": {
+      "name": "Language Learning",
+      "slug": "language-learning",
+      "sector": "education",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 53,
+    "fields": {
+      "name": "Law Enforcement",
+      "slug": "law-enforcement",
+      "sector": "government",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 54,
+    "fields": {
+      "name": "Manufacturing",
+      "slug": "manufacturing",
+      "sector": "manufacturing",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 55,
+    "fields": {
+      "name": "Mental Health",
+      "slug": "mental-health",
+      "sector": "health",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 56,
+    "fields": {
+      "name": "Mobile Apps",
+      "slug": "mobile-apps",
+      "sector": "technology",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 57,
+    "fields": {
+      "name": "Nutrition",
+      "slug": "nutrition",
+      "sector": "health",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 58,
+    "fields": {
+      "name": "Online Learning",
+      "slug": "online-learning",
+      "sector": "education",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 59,
+    "fields": {
+      "name": "Public Administration",
+      "slug": "public-administration",
+      "sector": "government",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 60,
+    "fields": {
+      "name": "Public Health",
+      "slug": "public-health",
+      "sector": "government",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 61,
+    "fields": {
+      "name": "Schools",
+      "slug": "schools",
+      "sector": "education",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 62,
+    "fields": {
+      "name": "Social Services",
+      "slug": "social-services",
+      "sector": "government",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 63,
+    "fields": {
+      "name": "Software Development",
+      "slug": "software-development",
+      "sector": "technology",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 64,
+    "fields": {
+      "name": "Transportation",
+      "slug": "transportation",
+      "sector": "government",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 65,
+    "fields": {
+      "name": "Tutoring",
+      "slug": "tutoring",
+      "sector": "education",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 66,
+    "fields": {
+      "name": "Universities",
+      "slug": "universities",
+      "sector": "education",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 67,
+    "fields": {
+      "name": "Vocational Training",
+      "slug": "vocational-training",
+      "sector": "education",
+      "category_type": "professional"
+    }
+  },
+  {
+    "model": "core.category",
+    "pk": 68,
+    "fields": {
+      "name": "Web Development",
+      "slug": "web-development",
+      "sector": "technology",
+      "category_type": "professional"
+    }
+  }
+]

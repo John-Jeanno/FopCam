@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for futuristic design */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    @apply bg-future-50 text-future-900;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+  }
+
+  #__next {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-fopcam-800 hover:bg-fopcam-900 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-fopcam-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply bg-fopcam-700 hover:bg-fopcam-800 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 border border-fopcam-600 hover:border-fopcam-700 focus:outline-none focus:ring-2 focus:ring-fopcam-500 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-future-200 overflow-hidden;
+  }
+
+  .card-header {
+    @apply p-6 border-b border-future-100;
+  }
+
+  .card-body {
+    @apply p-6;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border border-future-300 focus:border-fopcam-500 focus:ring-2 focus:ring-fopcam-200 transition-all duration-300 bg-white placeholder-future-400;
+  }
+
+  .nav-link {
+    @apply text-future-700 hover:text-fopcam-600 font-medium transition-colors duration-300 relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-fopcam-600 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .glow-effect {
+    @apply shadow-lg;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-future {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  }
+
+  .bg-gradient-fopcam {
+    background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 50%, #b91c1c 100%);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-future-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-fopcam-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-fopcam-500;
+}

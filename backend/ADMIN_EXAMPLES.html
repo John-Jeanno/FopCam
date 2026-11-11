@@ -1,0 +1,219 @@
+<!-- Exemples de personnalisation du template admin FopCam -->
+
+<!-- ============================================== -->
+<!-- EXEMPLE 1: Ajouter une nouvelle page admin -->
+<!-- ============================================== -->
+
+<!-- Fichier: core/templates/admin/analytics.html -->
+<!--
+{% extends "admin/base.html" %}
+{% block title %}Analytics - FopCam Admin{% endblock %}
+{% block title_display %}📊 Analytics{% endblock %}
+
+{% block content %}
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+    <div class="card">
+        <h3 style="color: #22c55e; margin-bottom: 1rem;">Ventes par mois</h3>
+        <p style="color: #94a3b8;">Graphique à ajouter</p>
+    </div>
+    <div class="card">
+        <h3 style="color: #22c55e; margin-bottom: 1rem;">Produits populaires</h3>
+        <p style="color: #94a3b8;">Top 5 produits</p>
+    </div>
+</div>
+{% endblock %}
+-->
+
+<!-- ============================================== -->
+<!-- EXEMPLE 2: Modifier les couleurs -->
+<!-- ============================================== -->
+
+<!-- Dans base.html, changez les variables CSS -->
+<!--
+:root {
+    --color-fopcam: #3b82f6;           /* Bleu au lieu de vert */
+    --color-fopcam-dark: #1e40af;
+    --color-future-900: #0f172a;
+    --color-future-800: #1e293b;
+    --color-future-700: #334155;
+    --color-future-200: #e2e8f0;
+    --color-future-100: #f1f5f9;
+}
+-->
+
+<!-- ============================================== -->
+<!-- EXEMPLE 3: Ajouter des statistiques personnalisées au dashboard -->
+<!-- ============================================== -->
+
+<!-- Dans core/templates/admin/index.html, ajoutez une card personnalisée -->
+<!--
+<div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem;">Revenue</p>
+            <h3 style="font-size: 2rem; color: #22c55e; margin: 0;">$12,345</h3>
+        </div>
+        <span style="font-size: 2rem;">💰</span>
+    </div>
+</div>
+-->
+
+<!-- ============================================== -->
+<!-- EXEMPLE 4: Ajouter un bouton personnalisé -->
+<!-- ============================================== -->
+
+<!-- Utilisez les classes CSS disponibles -->
+<!--
+<a href="/admin/core/product/add/" class="btn btn-primary">
+    Créer un produit
+</a>
+<button class="btn btn-secondary">Exporter</button>
+<button class="btn btn-danger">Supprimer</button>
+-->
+
+<!-- ============================================== -->
+<!-- EXEMPLE 5: Ajouter une section de paramètres -->
+<!-- ============================================== -->
+
+<!-- Card avec formulaire -->
+<!--
+<div class="card">
+    <h2 style="color: #22c55e; margin-bottom: 1.5rem;">⚙️ Paramètres</h2>
+    
+    <div style="margin-bottom: 1.5rem;">
+        <label>Nom de la boutique</label>
+        <input type="text" value="FopCam Marketplace" />
+    </div>
+    
+    <div style="margin-bottom: 1.5rem;">
+        <label>Email de contact</label>
+        <input type="email" value="contact@fopcam.com" />
+    </div>
+    
+    <button class="btn btn-primary">Enregistrer</button>
+</div>
+-->
+
+<!-- ============================================== -->
+<!-- EXEMPLE 6: Ajouter une table personnalisée -->
+<!-- ============================================== -->
+
+<!-- Utilisez la classe table -->
+<!--
+<table>
+    <thead>
+        <tr>
+            <th>Utilisateur</th>
+            <th>Commandes</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Jean Martin</td>
+            <td>5</td>
+            <td>$500</td>
+        </tr>
+    </tbody>
+</table>
+-->
+
+<!-- ============================================== -->
+<!-- EXEMPLE 7: Modifier les icônes du sidebar -->
+<!-- ============================================== -->
+
+<!-- Dans base.html, modifier les liens du sidebar -->
+<!--
+<a href="{% url 'admin:core_product_changelist' %}">📦 Produits</a>
+<a href="{% url 'admin:core_order_changelist' %}">🛒 Commandes</a>
+<a href="{% url 'admin:auth_user_changelist' %}">👥 Utilisateurs</a>
+-->
+
+<!-- ============================================== -->
+<!-- EXEMPLE 8: CSS personnalisé avancé -->
+<!-- ============================================== -->
+
+<!--
+{% block extra_css %}
+<style>
+    /* Animation de brillance */
+    .glow {
+        animation: glow 2s ease-in-out infinite;
+    }
+    
+    @keyframes glow {
+        0%, 100% { box-shadow: 0 0 10px rgba(34, 197, 94, 0.3); }
+        50% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.6); }
+    }
+    
+    /* Gradient de texte */
+    .gradient-text {
+        background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    /* Cards avec transitions */
+    .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(34, 197, 94, 0.2);
+    }
+</style>
+{% endblock %}
+-->
+
+<!-- ============================================== -->
+<!-- EXEMPLE 9: Ajouter une barre de progression -->
+<!-- ============================================== -->
+
+<!--
+<div style="background: rgba(255, 255, 255, 0.1); border-radius: 10px; height: 8px; overflow: hidden;">
+    <div style="width: 65%; height: 100%; background: linear-gradient(90deg, #22c55e 0%, #16a34a 100%);"></div>
+</div>
+-->
+
+<!-- ============================================== -->
+<!-- EXEMPLE 10: Modal/Dialog personnalisé -->
+<!-- ============================================== -->
+
+<!--
+<div style="position: fixed; inset: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center;">
+    <div class="card" style="width: 90%; max-width: 500px;">
+        <h2 style="color: #22c55e; margin-bottom: 1rem;">Confirmation</h2>
+        <p style="color: #94a3b8; margin-bottom: 1.5rem;">Êtes-vous sûr ?</p>
+        <div style="display: flex; gap: 1rem;">
+            <button class="btn btn-primary">Confirmer</button>
+            <button class="btn btn-secondary">Annuler</button>
+        </div>
+    </div>
+</div>
+-->
+
+<!-- ============================================== -->
+<!-- CONSEIL: Utiliser les variables CSS -->
+<!-- ============================================== -->
+
+<!-- 
+Toujours utiliser les variables CSS pour la cohérence :
+
+var(--color-fopcam)         - Couleur primaire verte
+var(--color-fopcam-dark)    - Couleur secondaire
+var(--color-future-900)     - Fond très sombre
+var(--color-future-800)     - Fond sombre
+var(--color-future-700)     - Fond moyen
+var(--color-future-200)     - Texte clair
+var(--color-future-100)     - Texte très clair
+var(--color-danger)         - Couleur danger (#ef4444)
+var(--color-warning)        - Couleur warning (#f59e0b)
+var(--color-success)        - Couleur succès (#22c55e)
+var(--color-info)           - Couleur info (#3b82f6)
+-->
+
+<!-- ============================================== -->
+<!-- FIN DES EXEMPLES -->
+<!-- ============================================== -->

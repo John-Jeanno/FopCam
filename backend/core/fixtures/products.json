@@ -1,0 +1,50 @@
+[
+  {
+    "model": "core.product",
+    "pk": 1,
+    "fields": {
+      "shop": 1,
+      "category": 2,
+      "title": "Poulets Bio Label Rouge",
+      "description": "Poulets produits en liberté selon les normes biologiques. Viande tendre et savoureuse, alimentation naturelle.",
+      "price": "8500.00",
+      "quantity": 25,
+      "is_active": true,
+      "created_at": "2024-01-15T11:00:00Z"
+      ,
+      "updated_at": "2024-01-15T11:00:00Z"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 2,
+    "fields": {
+      "shop": 2,
+      "category": 2,
+      "title": "Œufs frais de ferme",
+      "description": "Boîte de 30 œufs élevés en plein air, calibre moyen à gros.",
+      "price": "1200.00",
+      "quantity": 100,
+      "is_active": true,
+      "created_at": "2024-01-16T09:30:00Z"
+      ,
+      "updated_at": "2024-01-16T09:30:00Z"
+    }
+  },
+  {
+    "model": "core.product",
+    "pk": 3,
+    "fields": {
+      "shop": 3,
+      "category": 5,
+      "title": "Miel de fleurs sauvages",
+      "description": "Pot 500g de miel pur, saveur florale distincte.",
+      "price": "4500.00",
+      "quantity": 40,
+      "is_active": true,
+      "created_at": "2024-01-17T08:45:00Z"
+      ,
+      "updated_at": "2024-01-17T08:45:00Z"
+    }
+  }
+]

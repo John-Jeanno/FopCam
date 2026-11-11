@@ -1,0 +1,10 @@
+# Ignore Django templates - they have their own syntax
+**/*.html
+**/*.jinja
+**/*.jinja2
+*.html
+*.jinja
+*.jinja2
+
+# Ignore template directories
+backend/core/templates/

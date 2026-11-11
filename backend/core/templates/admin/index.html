@@ -1,0 +1,567 @@
+{% extends "admin/base.html" %}
+
+{% block title %}
+Tableau de bord - FopCam Admin
+{% endblock %}
+
+{% block title_display %}
+Tableau de bord
+{% endblock %}
+
+{% block content %}
+<div style="margin-bottom: 2rem">
+  <h2 style="color: #22c55e; margin-bottom: 1rem; font-size: 1.5rem">
+    👥 UTILISATEURS
+  </h2>
+  <div
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    "
+  >
+    <a
+      href="/admin/auth/user/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Utilisateurs
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_users }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">👤</span>
+      </div>
+    </a>
+
+    <a
+      href="/admin/auth/group/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Groupes
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_groups }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">🛡️</span>
+      </div>
+    </a>
+
+    <a
+      href="/admin/core/userprofile/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Profils
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_profiles }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">📋</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- Section Catalogue -->
+<div style="margin-bottom: 2rem">
+  <h2 style="color: #22c55e; margin-bottom: 1rem; font-size: 1.5rem">
+    🐔 CATALOGUE
+  </h2>
+  <div
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    "
+  >
+    <a
+      href="/admin/core/product/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Produits
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_products }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">🐔</span>
+      </div>
+    </a>
+
+    <a
+      href="/admin/core/category/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Catégories
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_categories }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">🏷️</span>
+      </div>
+    </a>
+
+    <a
+      href="/admin/auth/user/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Boutiques
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_shops }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">🏪</span>
+      </div>
+    </a>
+
+    <a
+      href="/admin/core/review/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Avis
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_reviews }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">⭐</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- Section Commerce -->
+<div style="margin-bottom: 2rem">
+  <h2 style="color: #22c55e; margin-bottom: 1rem; font-size: 1.5rem">
+    🛒 COMMERCE
+  </h2>
+  <div
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    "
+  >
+    <a
+      href="/admin/core/order/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Commandes
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_orders }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">🛒</span>
+      </div>
+    </a>
+
+    <a
+      href="/admin/core/orderitem/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Détails commande
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_order_items }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">📦</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- Section Finances -->
+<div style="margin-bottom: 2rem">
+  <h2 style="color: #22c55e; margin-bottom: 1rem; font-size: 1.5rem">
+    💰 FINANCES
+  </h2>
+  <div
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    "
+  >
+    <a
+      href="/admin/core/transaction/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Transactions
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_transactions }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">💳</span>
+      </div>
+    </a>
+
+    <a
+      href="/admin/core/payment/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Paiements
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_payments }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">💰</span>
+      </div>
+    </a>
+
+    <a
+      href="/admin/core/invoice/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Factures
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_invoices }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">🧾</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- Section Logistique -->
+<div style="margin-bottom: 2rem">
+  <h2 style="color: #22c55e; margin-bottom: 1rem; font-size: 1.5rem">
+    🚚 LOGISTIQUE
+  </h2>
+  <div
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    "
+  >
+    <a
+      href="/admin/core/delivery/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Livraisons
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_deliveries }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">🚚</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- Section Communication -->
+<div style="margin-bottom: 2rem">
+  <h2 style="color: #22c55e; margin-bottom: 1rem; font-size: 1.5rem">
+    💬 COMMUNICATION
+  </h2>
+  <div
+    style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    "
+  >
+    <a
+      href="/admin/core/message/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Messages
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_messages }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">✉️</span>
+      </div>
+    </a>
+
+    <a
+      href="/admin/core/notification/"
+      class="card"
+      style="
+        text-decoration: none;
+        color: inherit;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      "
+    >
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <div>
+          <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 0.5rem">
+            Notifications
+          </p>
+          <h3 style="font-size: 2rem; color: #22c55e; margin: 0">
+            {{ total_notifications }}
+          </h3>
+        </div>
+        <span style="font-size: 2rem">🔔</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<div class="card">
+  <h2 style="margin-bottom: 1.5rem; color: #22c55e">Actions rapides</h2>
+  <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+    <a href="/admin/core/product/add/" class="btn btn-primary"
+      >➕ Ajouter un produit</a
+    >
+    <a href="/admin/core/order/" class="btn btn-secondary"
+      >🛒 Voir les commandes</a
+    >
+    <a href="/admin/auth/user/add/" class="btn btn-secondary"
+      >👤 Ajouter un utilisateur</a
+    >
+    <a href="/admin/core/shop/add/" class="btn btn-secondary"
+      >🏪 Ajouter une boutique</a
+    >
+  </div>
+</div>
+
+<div class="card">
+  <h2 style="margin-bottom: 1.5rem; color: #22c55e">Informations du système</h2>
+  <table>
+    <tr>
+      <td style="color: #94a3b8">Django Version</td>
+      <td style="color: #22c55e; font-weight: 600">{{ django_version }}</td>
+    </tr>
+    <tr>
+      <td style="color: #94a3b8">Base de données</td>
+      <td style="color: #22c55e; font-weight: 600">SQLite3</td>
+    </tr>
+    <tr>
+      <td style="color: #94a3b8">Mode Debug</td>
+      <td style="color: #22c55e; font-weight: 600">
+        {{ debug|yesno:"Activé,Désactivé" }}
+      </td>
+    </tr>
+  </table>
+</div>
+{% endblock %}

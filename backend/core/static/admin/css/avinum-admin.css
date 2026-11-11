@@ -1,0 +1,484 @@
+/* FopCam Admin - Change List et Change Form Styles */
+
+/* Change List Styles */
+.admin-changelist {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.admin-changelist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.admin-changelist-title {
+    color: #22c55e;
+    font-size: 1.75rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.admin-changelist-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Search Bar Styles */
+#changelist-search {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#changelist-search input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+#changelist-search input[type="text"]:focus {
+    outline: none;
+    border-color: #22c55e;
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.2);
+}
+
+/* Table Styles */
+.admin-changelist-table {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.admin-changelist-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-changelist-table thead {
+    background: rgba(20, 30, 48, 0.8);
+    border-bottom: 2px solid rgba(34, 197, 94, 0.3);
+}
+
+.admin-changelist-table th {
+    padding: 1.25rem;
+    text-align: left;
+    color: #22c55e;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.admin-changelist-table td {
+    padding: 1rem 1.25rem;
+    color: #e2e8f0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.95rem;
+}
+
+.admin-changelist-table tbody tr {
+    transition: all 0.3s;
+}
+
+.admin-changelist-table tbody tr:hover {
+    background: rgba(34, 197, 94, 0.08);
+}
+
+.admin-changelist-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Links in table */
+.admin-changelist-table a {
+    color: #22c55e;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.admin-changelist-table a:hover {
+    color: #16a34a;
+    background: rgba(34, 197, 94, 0.1);
+}
+
+/* Pagination */
+.admin-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.admin-pagination a,
+.admin-pagination span {
+    padding: 0.5rem 1rem;
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.admin-pagination a:hover {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: #22c55e;
+}
+
+.admin-pagination .current {
+    background: #22c55e;
+    color: #0f172a;
+}
+
+/* Change Form Styles */
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.admin-form-fieldset {
+    background: rgba(30, 41, 59, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.admin-form-fieldset-title {
+    color: #22c55e;
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Form Fields */
+.admin-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.admin-form label {
+    color: #22c55e;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.admin-form label .required {
+    color: #ef4444;
+    margin-left: 0.25rem;
+}
+
+.admin-form input[type="text"],
+.admin-form input[type="email"],
+.admin-form input[type="number"],
+.admin-form input[type="date"],
+.admin-form input[type="time"],
+.admin-form input[type="datetime-local"],
+.admin-form input[type="password"],
+.admin-form input[type="url"],
+.admin-form input[type="tel"],
+.admin-form textarea,
+.admin-form select,
+.admin-form input[type="file"] {
+    padding: 0.75rem;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #e2e8f0;
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.3s;
+}
+
+.admin-form input[type="text"]:focus,
+.admin-form input[type="email"]:focus,
+.admin-form input[type="number"]:focus,
+.admin-form input[type="date"]:focus,
+.admin-form input[type="time"]:focus,
+.admin-form input[type="datetime-local"]:focus,
+.admin-form input[type="password"]:focus,
+.admin-form input[type="url"]:focus,
+.admin-form input[type="tel"]:focus,
+.admin-form textarea:focus,
+.admin-form select:focus,
+.admin-form input[type="file"]:focus {
+    outline: none;
+    border-color: #22c55e;
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.2);
+    background: rgba(30, 41, 59, 0.7);
+}
+
+.admin-form textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Checkbox and Radio */
+.admin-form input[type="checkbox"],
+.admin-form input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #22c55e;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.admin-form input[type="checkbox"] + label,
+.admin-form input[type="radio"] + label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: #e2e8f0;
+    font-weight: 500;
+}
+
+/* Error Messages */
+.admin-form-errors {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid #ef4444;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    color: #fca5a5;
+    margin-bottom: 1rem;
+}
+
+.admin-form-errors strong {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.admin-form-errors p,
+.admin-form-errors li {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.admin-field-error {
+    border-color: #ef4444 !important;
+}
+
+.admin-field-errors {
+    color: #fca5a5;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.admin-field-errors li {
+    margin: 0.25rem 0;
+}
+
+/* Help Text */
+.admin-form-help-text {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+    line-height: 1.4;
+}
+
+/* Form Buttons */
+.admin-form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.admin-form-buttons button,
+.admin-form-buttons a {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.admin-form-buttons button[type="submit"],
+.admin-form-buttons button[name="_save"] {
+    background: #22c55e;
+    color: #0f172a;
+}
+
+.admin-form-buttons button[type="submit"]:hover,
+.admin-form-buttons button[name="_save"]:hover {
+    background: #16a34a;
+    box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3);
+    transform: translateY(-2px);
+}
+
+.admin-form-buttons button[name="_continue"] {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    border: 1px solid #22c55e;
+}
+
+.admin-form-buttons button[name="_continue"]:hover {
+    background: rgba(34, 197, 94, 0.3);
+}
+
+.admin-form-buttons button[name="_addanother"] {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.admin-form-buttons button[name="_addanother"]:hover {
+    background: rgba(34, 197, 94, 0.2);
+}
+
+.admin-form-buttons a {
+    background: rgba(148, 163, 184, 0.1);
+    color: #94a3b8;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.admin-form-buttons a:hover {
+    background: rgba(148, 163, 184, 0.2);
+    color: #cbd5e1;
+}
+
+/* Danger Button */
+.admin-form-delete-btn {
+    background: rgba(239, 68, 68, 0.1);
+    color: #fca5a5;
+    border: 1px solid #ef4444;
+}
+
+.admin-form-delete-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: #ef4444;
+    color: #fecaca;
+}
+
+/* Status Badge */
+.admin-status-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.admin-status-badge.active {
+    background: rgba(34, 197, 94, 0.2);
+    color: #86efac;
+}
+
+.admin-status-badge.inactive {
+    background: rgba(148, 163, 184, 0.2);
+    color: #cbd5e1;
+}
+
+.admin-status-badge.pending {
+    background: rgba(245, 158, 11, 0.2);
+    color: #fcd34d;
+}
+
+.admin-status-badge.error {
+    background: rgba(239, 68, 68, 0.2);
+    color: #fca5a5;
+}
+
+/* Inline Forms */
+.admin-inline-form {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px dashed rgba(34, 197, 94, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-changelist-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-form-buttons {
+        flex-direction: column;
+    }
+
+    .admin-form-buttons button,
+    .admin-form-buttons a {
+        width: 100%;
+    }
+
+    .admin-changelist-table th,
+    .admin-changelist-table td {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .admin-form-fieldset {
+        padding: 1rem;
+    }
+
+    #changelist-search input[type="text"] {
+        width: 100%;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.admin-form-fieldset,
+.admin-changelist-table,
+.admin-form-errors {
+    animation: fadeIn 0.3s ease-out;
+}

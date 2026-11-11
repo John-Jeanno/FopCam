@@ -1,0 +1,37 @@
+{
+    "id": ".",
+    "name": "FopCam",
+    "short_name": "FopCam",
+    "start_url": ".",
+    "scope": ".",
+    "display": "standalone",
+    "background_color": "#101b36",
+    "theme_color": "#101b36",
+    "description": "FopCam, votre réseau social et marketplace.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "fopcam-icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "fopcam-icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "fopcam-icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "fopcam-icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

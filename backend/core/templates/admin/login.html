@@ -1,0 +1,271 @@
+{% load static %}
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Connexion - FopCam Admin</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --color-fopcam: #22c55e;
+        --color-fopcam-dark: #16a34a;
+        --color-future-900: #0f172a;
+        --color-future-800: #1e293b;
+        --color-future-700: #334155;
+        --color-future-200: #e2e8f0;
+        --color-future-100: #f1f5f9;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Helvetica Neue", "Arial", sans-serif;
+        background: linear-gradient(
+          135deg,
+          var(--color-future-900) 0%,
+          var(--color-future-800) 100%
+        );
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+
+      .background-pattern {
+        position: fixed;
+        inset: 0;
+        opacity: 0.1;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        pointer-events: none;
+      }
+
+      .login-container {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .login-card {
+        background: rgba(30, 41, 59, 0.8);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(34, 197, 94, 0.2);
+        border-radius: 1.5rem;
+        padding: 2.5rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      .login-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .login-logo {
+        width: 200px;
+        height: 120px;
+        margin: 0 auto 1rem;
+        border-radius: 1rem;
+        background: url("{% static 'core/fopcam-logo.png' %}") center/contain no-repeat;
+      }
+
+      .login-header h1 {
+        font-size: 1.8rem;
+        color: var(--color-fopcam);
+        margin-bottom: 0.5rem;
+      }
+
+      .login-header p {
+        color: var(--color-future-200);
+        font-size: 0.9rem;
+        opacity: 0.7;
+      }
+
+      .login-form {
+        margin-top: 2rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--color-future-200);
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.75rem;
+        color: var(--color-future-200);
+        font-family: inherit;
+        transition: all 0.3s ease;
+        font-size: 0.95rem;
+      }
+
+      input[type="text"]:focus,
+      input[type="password"]:focus {
+        outline: none;
+        background: rgba(255, 255, 255, 0.1);
+        border-color: var(--color-fopcam);
+        box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+      }
+
+      input[type="checkbox"] {
+        margin-right: 0.5rem;
+      }
+
+      .form-remember {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        color: var(--color-future-200);
+        font-size: 0.9rem;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 1rem;
+        background: linear-gradient(
+          135deg,
+          var(--color-fopcam) 0%,
+          var(--color-fopcam-dark) 100%
+        );
+        border: none;
+        border-radius: 0.75rem;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(34, 197, 94, 0.3);
+      }
+
+      .submit-btn:active {
+        transform: translateY(0);
+      }
+
+      .error-message {
+        background: rgba(239, 68, 68, 0.1);
+        border: 1px solid rgba(239, 68, 68, 0.4);
+        border-left: 4px solid #ef4444;
+        color: #fca5a5;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+      }
+
+      .errorlist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        color: #fca5a5;
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+      }
+
+      .errorlist li {
+        padding: 0.25rem 0;
+      }
+
+      .login-footer {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--color-future-200);
+        font-size: 0.85rem;
+        opacity: 0.6;
+      }
+
+      @media (max-width: 480px) {
+        .login-card {
+          padding: 1.5rem;
+        }
+
+        .login-logo {
+          width: 60px;
+          height: 60px;
+          font-size: 2rem;
+        }
+
+        .login-header h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background-pattern"></div>
+
+    <div class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <div class="login-logo" style="width: 200px; height: 120px;"></div>
+        </div>
+
+        {% if form.non_field_errors %}
+        <div class="error-message">
+          {% for error in form.non_field_errors %} {{ error }} {% endfor %}
+        </div>
+        {% endif %}
+
+        <form method="post" class="login-form">
+          {% csrf_token %}
+
+          <div class="form-group">
+            <label for="id_username">Nom d'utilisateur</label>
+            {{ form.username }} {% if form.username.errors %}
+            <ul class="errorlist">
+              {% for error in form.username.errors %}
+              <li>{{ error }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+
+          <div class="form-group">
+            <label for="id_password">Mot de passe</label>
+            {{ form.password }} {% if form.password.errors %}
+            <ul class="errorlist">
+              {% for error in form.password.errors %}
+              <li>{{ error }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+
+          <div class="form-remember">
+            <input type="checkbox" id="id_remember" name="remember" />
+            <label for="id_remember" style="margin-bottom: 0"
+              >Se souvenir de moi</label
+            >
+          </div>
+
+          <button type="submit" class="submit-btn">Connexion</button>
+        </form>
+
+        <div class="login-footer">
+          © 2025 FopCam - Le premier réseau social et marketplace pour connecter vendeurs et consommateurs en circuit court
+      </div>
+    </div>
+  </body>
+</html>

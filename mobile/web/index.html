@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="permissions-policy" content="interest-cohort=(), microphone=*, camera=*">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="FopCam, votre réseau social et marketplace.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="FopCam">
+  <meta name="theme-color" content="#101b36">
+  <link rel="apple-touch-icon" sizes="180x180" href="fopcam-apple-touch-icon.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="fopcam-favicon.png">
+
+  <title>FopCam</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    #fopcam-install-banner {
+      position: fixed;
+      z-index: 10000;
+      right: 16px;
+      bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: calc(100vw - 32px);
+      padding: 12px 14px;
+      border: 1px solid #b91c1c;
+      border-radius: 14px;
+      background: #101b36;
+      color: #fff;
+      box-shadow: 0 8px 28px #0006;
+      font: 14px system-ui, sans-serif;
+    }
+
+    #fopcam-install-banner[hidden] {
+      display: none;
+    }
+
+    #fopcam-install-button {
+      border: 0;
+      border-radius: 9px;
+      padding: 10px 14px;
+      background: #991b1b;
+      color: #fff;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    #fopcam-install-dismiss {
+      border: 0;
+      padding: 4px;
+      background: transparent;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+      #fopcam-install-banner {
+        right: 8px;
+        bottom: 8px;
+        left: 8px;
+        justify-content: space-between;
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside id="fopcam-install-banner" aria-label="Installer FopCam">
+    <span>Installer FopCam sur cet appareil</span>
+    <button id="fopcam-install-button" type="button">Installer</button>
+    <button id="fopcam-install-dismiss" type="button" aria-label="Fermer">×</button>
+  </aside>
+  <script>
+    (() => {
+      const banner = document.getElementById('fopcam-install-banner');
+      const installButton = document.getElementById('fopcam-install-button');
+      const dismissButton = document.getElementById('fopcam-install-dismiss');
+      const dismissedKey = 'fopcam-install-banner-dismissed';
+      let installPrompt = null;
+
+      const dismissBanner = () => {
+        banner.hidden = true;
+        try {
+          window.localStorage.setItem(dismissedKey, 'true');
+        } catch (_) {
+          // Keep the close button functional when browser storage is unavailable.
+        }
+      };
+
+      const isStandalone = () =>
+        window.matchMedia('(display-mode: standalone)').matches ||
+        window.navigator.standalone === true;
+
+      let wasDismissed = false;
+      try {
+        wasDismissed = window.localStorage.getItem(dismissedKey) === 'true';
+      } catch (_) {
+        // The banner remains dismissible for the current page session.
+      }
+
+      if (isStandalone() || wasDismissed) {
+        banner.hidden = true;
+        return;
+      }
+
+      window.addEventListener('beforeinstallprompt', (event) => {
+        event.preventDefault();
+        installPrompt = event;
+      });
+
+      window.addEventListener('appinstalled', () => {
+        banner.hidden = true;
+        installPrompt = null;
+      });
+
+      dismissButton.addEventListener('click', () => {
+        dismissBanner();
+      });
+
+      installButton.addEventListener('click', async () => {
+        if (installPrompt) {
+          installPrompt.prompt();
+          const choice = await installPrompt.userChoice;
+          if (choice.outcome === 'accepted') dismissBanner();
+          installPrompt = null;
+          return;
+        }
+
+        const isAppleMobile =
+          /iPad|iPhone|iPod/.test(window.navigator.userAgent) &&
+          !window.navigator.standalone;
+        const instructions = isAppleMobile
+          ? 'Dans Safari, touchez Partager, puis « Sur l’écran d’accueil ».'
+          : 'Ouvrez le menu de votre navigateur et choisissez « Installer FopCam » ou « Ajouter à l’écran d’accueil ». Si cette option est absente, ouvrez ce lien dans Chrome, Edge ou Safari.';
+        window.alert(instructions);
+      });
+    })();
+  </script>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
